@@ -27,7 +27,7 @@
                     </li>
 
                     <li class="active">
-                        <a href="addservices.php"> <i class="menu-icon fa fa-plus"></i>Add Service </a>
+                        <a href="Addservices.php"> <i class="menu-icon fa fa-plus"></i>Add Service </a>
                     </li>
 <?php endif; ?>
 
