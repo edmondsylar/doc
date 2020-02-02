@@ -1,3 +1,4 @@
+
 <aside id="left-panel" class="left-panel">
         <nav class="navbar navbar-expand-sm navbar-default">
 
@@ -18,7 +19,7 @@
                         <a href="services.php"> <i class="menu-icon fa fa-dashboard"></i>Services </a>
                     </li>
 
-
+<?php if (isset($_SESSION['loggedin'])): ?>
                     <h3 class="menu-title">Admins</h3><!-- /.menu-title -->
 
                     <li class="active">
@@ -28,6 +29,7 @@
                     <li class="active">
                         <a href="AddServices.php"> <i class="menu-icon fa fa-plus"></i>Add Service </a>
                     </li>
+<?php endif; ?>
 
                 </ul>
             </div><!-- /.navbar-collapse -->

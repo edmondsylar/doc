@@ -38,7 +38,7 @@
         <div class="container">
             <div class="login-content">
                 <div class="login-logo">
-                    <a href="login.php">
+                    <a href="index.php">
                       Doc Login
                     </a>
                 </div>

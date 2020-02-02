@@ -14,20 +14,20 @@
                             </form>
                         </div>
 
-                        <a href="/"><div class="dropdown for-notification">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="notification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div class="dropdown for-notification">
+                        <a href="index.php"> <button href="/" class="btn btn-secondary dropdown-toggle" type="button" id="notification" aria-haspopup="true" aria-expanded="false">
                                 <i class="fa fa-bell"></i>
                                 <span>Drugs</span>
-                            </button>
-                        </div></a>
+                            </button></a>
+                        </div>
 
                         <div class="dropdown for-message">
-                            <button class="btn btn-secondary dropdown-toggle" type="button"
+                            <a href="services.php"><button class="btn btn-secondary dropdown-toggle" type="button"
                                 id="message"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                aria-haspopup="true" aria-expanded="false">
                                 <i class="ti-email"></i>
                                 Services
-                            </button>
+                            </button></a>
 
                         </div>
                     </div>
@@ -36,17 +36,17 @@
                 <div class="col-sm-5">
                     <div class="user-area dropdown float-right">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <img class="user-avatar rounded-circle" src="images/admin.jpg" alt="User Avatar">
+                            <!-- <img class="user-avatar rounded-circle" src="images/admin.jpg" alt="User Avatar"> -->
+                            <i class="fa fa-user-circle large"></i>
                         </a>
 
                         <div class="user-menu dropdown-menu">
-                            <a class="nav-link" href="#"><i class="fa fa-user"></i> My Profile</a>
-
-                            <a class="nav-link" href="#"><i class="fa fa-user"></i> Notifications <span class="count">13</span></a>
-
-                            <a class="nav-link" href="#"><i class="fa fa-cog"></i> Settings</a>
-
-                            <a class="nav-link" href="#"><i class="fa fa-power-off"></i> Logout</a>
+                            <?php if (isset($_SESSION['loggedin'])): ?>
+                            <a class="nav-link" href="backend/logout.php"><i class="fa fa-power-off"></i> Logout</a>
+                            <?php endif; ?>
+                            <?php if (!isset($_SESSION['loggedin'])): ?>
+                              <a class="nav-link" href="login.php"><i class="fa fa-power-off"></i> Login</a>
+                            <?php endif; ?>
                         </div>
                     </div>
 
