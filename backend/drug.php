@@ -8,8 +8,8 @@ $cur = new AppInit();
 
     $imagename = addslashes(file_get_contents($_FILES['image']['tmp_name']));
     $title = $_POST['name'];
-    $desc = $_POST['address'];
-    $address = $_POST['desc'];
+    $desc = $_POST['desc'];
+    $address = $_POST['address'];
 
     $cur->add_drug($title, $desc, $address, $imagename);
 

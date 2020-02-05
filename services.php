@@ -45,6 +45,7 @@
                     $image = base64_encode($service['image']);
                     // echo $img;
                    ?>
+              <a href="details.php?id=<?php echo $service['id'] ?>&type=service">
                  <div class="col-md-4">
                     <div class="card">
                         <div class="card-body">
@@ -61,6 +62,7 @@
                         </div>
                   </div>
                 </div>
+              </a>
               <?php endforeach; ?>
             <?php endif; ?>
 
