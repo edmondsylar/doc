@@ -19,7 +19,7 @@
 <div class="col-lg-6">
     <div class="card">
         <div class="card-header">
-            <strong class="card-title">Drug results for - <?php echo $_GET['search'] ?></strong>
+            <strong class="card-title">Drugs.</strong>
         </div>
         <div class="card-body">
             <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
@@ -53,7 +53,7 @@
 <div class="col-lg-6">
     <div class="card">
         <div class="card-header">
-            <strong class="card-title">Service results for - <?php echo $_GET['search'] ?></strong>
+            <strong class="card-title">Service.</strong>
         </div>
         <div class="card-body">
             <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
