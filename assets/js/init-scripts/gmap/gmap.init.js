@@ -235,10 +235,10 @@ map = new GMaps({
     lat: -12.043333,
     lng: -77.028333,
     click: function(e){
-        alert('click');
+        console.log('click');
     },
     dragend: function(e){
-        alert('dragend');
+      console.log('draging')
     }
 });
 
