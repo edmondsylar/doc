@@ -92,16 +92,18 @@
       return $results;
     }
 
-    function search($keyword){
-      $q = "(SELECT *, 'drugs' as drug from drugs WHERE title LIKE '%$keyword' OR description LIKE '%$keyword') UNION (SELECT *, 'drugs' as Service from drugs WHERE title LIKE '%$keyword' OR description LIKE '%$keyword')";
-
-      $exec = mysqli_query($this->conn, $q);
-      $results = mysqli_fetch_assoc($exec);
-      echo "String ".gettype($results);
-
-      $_SESSION['results'] = $results;
-      header("Location: ../results.php");
+    function search_drug($keyword){
+      $query = "SELECT * FROM drugs where title LIKE '%$keyword%' OR description LIKE '%$keyword%'";
+      $res = mysqli_query($this->conn, $query);
+      return $res;
     }
+
+    function search_service($keyword){
+      $query = "SELECT * FROM services where title LIKE '%$keyword%' OR description LIKE '%$keyword%'";
+      $res = mysqli_query($this->conn, $query);
+      return $res;
+    }
+
 
     function product($id, $type){
       if($type == 'service'){

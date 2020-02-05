@@ -8,8 +8,9 @@
                     <div class="header-left">
                         <button class="search-trigger"><i class="fa fa-search"></i></button>
                         <div class="form-inline">
-                            <form class="search-form">
-                                <input class="form-control mr-sm-2" type="text" placeholder="Search ..." aria-label="Search">
+                            <form class="search-form" method="POST" action="backend/search.php">
+                                <input name="search" class="form-control mr-sm-2" type="text" placeholder="Search ..." aria-label="Search">
+                                <input type="submit" value="search"/>
                                 <button class="search-close" type="submit"><i class="fa fa-close"></i></button>
                             </form>
                         </div>

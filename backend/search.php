@@ -2,7 +2,10 @@
   include_once "config.php";
   $cur = new AppInit();
 
-  $cur->search('panadol');
+if ($_SERVER['REQUEST_METHOD'] == "POST"){
+  $s = $_POST['search'];
+  header("Location: ../results.php?search=".$s);
+}
 
 
  ?>
