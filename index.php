@@ -46,7 +46,7 @@
                     $image = base64_encode($drug['image']);
                     // echo $image;
                    ?>
-                 <div class="col-md-4">
+                <a href="details.php?id=  <?php echo $drug['id'] ?>&type=drug"><div class="col-md-4">
                     <div class="card">
                         <div class="card-body">
                             <div class="mx-auto d-block">
@@ -60,7 +60,7 @@
                             </div>
                         </div>
                   </div>
-                </div>
+                </div></a>
               <?php endforeach; ?>
             <?php endif; ?>
 
